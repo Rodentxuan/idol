@@ -1,0 +1,271 @@
+html, body{
+  background-color: rgb(238, 203, 89);
+  color: white;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  
+          
+}
+/* body{
+  position: relative;
+} */
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+  #loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+
+      border: 3px solid #3498db;
+      z-index: 1500;
+  }
+
+  #loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid #e74c3c;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 3px solid #f9c922;
+}
+
+/* change border to transparent and set only border-top to a solid color */
+#loader {
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+}
+#loader:before {
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+}
+#loader:after {
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+}
+#loader {
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+#loader:before {
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+#loader:after {
+  border-radius: 50%;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(0deg);  /* IE 9 */
+      transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: rotate(360deg);  /* IE 9 */
+      transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(-100%);  /* IE 9 */
+  transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(100%);  /* IE 9 */
+  transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.loaded #loader {
+  opacity: 0;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out; 
+          transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+
+  -webkit-transition: all 0.3s 0.6s ease-out; 
+          transition: all 0.3s 0.6s ease-out;
+}
+
+.no-js #loader-wrapper {
+  display: none;
+}
+.no-js h1 {
+  color: #ffffff;
+}
+
+
+
+
+
+
+#swiper{
+  width:80vw;
+  margin: 0 auto;
+
+}
+#swiper-card{
+  cursor: grab;
+  background-color: white;
+  color: black;
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 10px #00000042;
+  border-radius: 10px;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+
+
+}
+.head-title{
+  text-align: center;
+  padding: 20px;
+  text-shadow: 0px 0px 5px white;
+  color:pink;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 5rem;
+}
+.swiper-card-img{
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.swiper-card-info{
+  padding: 20px;
+  user-select: none;
+}
+
+
+/*  -- CSS ANIMATIONS! --  */
+@keyframes fadeDownIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5s0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes leftSwipe {
+  0% {
+     transform: rotate(0deg) translate(0,0);
+     opacity: 1;
+   }
+   100% {
+       transform: rotate(-10deg) translate(-200px,20px);
+       opacity: 0;
+     }
+}
+@keyframes rightSwipe {
+   0% {
+      transform: rotate(0deg) translate(0,0);
+      opacity: 1;
+    }
+    100% {
+        transform: rotate(10deg) translate(200px,20px);
+        opacity: 0;
+      }
+}
+
+
+#btn{
+  padding: 1rem ; 
+  outline: none;
+  font-size: 4rem;
+  background: pink;
+  border: 1px solid white;
+  color:white;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#btn:hover {background-color: #dd7a6d}
+
+#btn:active {
+  background-color: #d66051;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.guide{
+  font-size: 2rem;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Idol</title>
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Color Clock">
+  
+  
+  <!-- iPad, iOS 7+ -->
+  <link href="apple-touch-icon-76x76.png" sizes="76x76" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPad, iOS 7+, retina -->
+  <link href="apple-touch-icon-152x152.png" sizes="152x152" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPad, iOS 6 -->
+  <link href="apple-touch-icon-72x72.png" sizes="72x72" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPad, iOS 6, retina -->
+  <link href="apple-touch-icon-144x144.png" sizes="144x144" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPhone 6 Plus icon -->
+  <link href="apple-touch-icon-precomposed-180.png" sizes="120x120"
+      rel="apple-touch-icon-precomposed">
+  <!-- iPhone, iOS 6 -->
+  <link href="apple-touch-icon-57x57.png" sizes="57x57" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPhone ,iOS 6, retina -->
+  <link href="apple-touch-icon-114x114.png" sizes="114x114" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPhone, iOS 7+ -->
+  <link href="apple-touch-icon-60x60.png" sizes="60x60" 
+      rel="apple-touch-icon-precomposed">
+  <!-- iPhone, iOS 7+, retina -->
+  <link href="apple-touch-icon-120x120.png" sizes="120x120" 
+      rel="apple-touch-icon-precomposed">
+  
+  
+  <!-- Static Startup Screens-->
+  <!-- iPad, retina, portrait -->
+  <link href="apple-touch-startup-image-1536x2008.png"
+        media="(device-width: 768px) and (device-height: 1024px)
+           and (orientation: portrait)
+           and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+  <!-- iPad, retina, landscape -->
+  <link href="apple-touch-startup-image-1496x2048.png"
+        media="(device-width: 768px) and (device-height: 1024px)
+           and (orientation: landscape)
+           and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+  <!-- iPad, portrait -->
+  <link href="apple-touch-startup-image-768x1004.png"
+        media="(device-width: 768px) and (device-height: 1024px)
+           and (orientation: portrait)
+           and (-webkit-device-pixel-ratio: 1)"
+        rel="apple-touch-startup-image">
+  <!-- iPad, landscape -->
+  <link href="apple-touch-startup-image-748x1024.png"
+        media="(device-width: 768px) and (device-height: 1024px)
+           and (orientation: landscape)
+           and (-webkit-device-pixel-ratio: 1)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone 6 Plus portrait startup image -->
+  <link href="apple-touch-startup-image-1242x2148.png"
+        media="(device-width: 414px) and (device-height: 736px)
+               and (-webkit-device-pixel-ratio: 3)
+               and (orientation: portrait)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone 6 Plus landscape startup image -->
+  <link href="apple-touch-startup-image-1182x2208.png"
+        media="(device-width: 414px) and (device-height: 736px)
+               and (-webkit-device-pixel-ratio: 3)
+               and (orientation: landscape)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone 6 startup image -->
+  <link href="apple-touch-startup-image-750x1294.png"
+        media="(device-width: 375px) and (device-height: 667px)
+               and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone, retina -->
+  <link href="apple-touch-startup-image-640x920.png"
+        media="(device-width: 320px) and (device-height: 480px)
+           and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone -->
+  <link href="apple-touch-startup-image-320x460.png"
+        media="(device-width: 320px) and (device-height: 480px)
+           and (-webkit-device-pixel-ratio: 1)"
+        rel="apple-touch-startup-image">
+  <!-- iPhone 5 -->
+  <link href="apple-touch-startup-image-640x1096.png"
+        media="(device-width: 320px) and (device-height: 568px)
+           and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>  
+
+  <div id="card">
+    <div class="container">
+      <h1 class="head-title">Chinese Idols</h1>
+      <div id="swiper">
+        <div id="swiper-card">
+          <img src="#" draggable="false" class="swiper-card-img" />
+          <section class="swiper-card-info">
+            <h2 class="swiper-card-name"></h2>
+            <p class="swiper-card-location"></p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+
+
+  <center>
+    <br />
+    <p class="guide">You can swipe left or right!<p>
+  </center>
+
+  <center class = "btns">
+      <button id = "btn" onclick="prev()">Prev</button>
+      <button id = "btn" onclick="randomCard()">Random</button>
+      <button id = "btn" onclick="next()">Next</button> 
+  </center>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js'></script>
+  <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
